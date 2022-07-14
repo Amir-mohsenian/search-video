@@ -7,5 +7,5 @@ import retrofit2.http.Query
 
 interface RetrofitService {
     @GET("/search")
-    fun getSearchResponse(@Query("query") query: String): Response<BaseResponse<SearchResponse>>
+    suspend fun getSearchResponse(@Query("query") query: String): Response<BaseResponse<SearchResponse>>
 }
